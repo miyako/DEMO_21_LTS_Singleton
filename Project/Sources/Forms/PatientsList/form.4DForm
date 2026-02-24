@@ -1,0 +1,315 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"css": "tasksList.css",
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 1100,
+	"windowMinHeight": 650,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver"
+	],
+	"windowTitle": "Tasks List",
+	"destination": "detailScreen",
+	"formClass": "PatientsList",
+	"pages": [
+		{
+			"objects": {
+				"Background": {
+					"type": "rectangle",
+					"left": 0,
+					"top": 0,
+					"width": 1100,
+					"height": 650,
+					"fill": "#155BDC",
+					"stroke": "transparent"
+				},
+				"Background1": {
+					"type": "picture",
+					"top": 0,
+					"left": 0,
+					"width": 695,
+					"height": 650,
+					"picture": "/RESOURCES/background.png",
+					"pictureFormat": "scaled"
+				},
+				"ListboxCard": {
+					"type": "rectangle",
+					"left": 20,
+					"top": 60,
+					"width": 650,
+					"height": 575,
+					"fill": "#FFFFFF",
+					"stroke": "#E5E5E5",
+					"strokeWidth": 1,
+					"borderRadius": 12
+				},
+				"DetailCard": {
+					"type": "rectangle",
+					"left": 690,
+					"top": 60,
+					"width": 390,
+					"height": 575,
+					"fill": "#FFFFFF",
+					"stroke": "#E5E5E5",
+					"strokeWidth": 1,
+					"borderRadius": 12
+				}
+			}
+		},
+		{
+			"objects": {
+				"TasksListbox": {
+					"type": "listbox",
+					"left": 30,
+					"top": 115,
+					"width": 630,
+					"height": 505,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.patients",
+					"currentItemSource": "Form:C1466.currentPatient",
+					"selectedItemsSource": "Form:C1466.selectedPatients",
+					"rowHeight": "32px",
+					"headerHeight": "32px",
+					"alternateBackground": "#F9F9F9",
+					"hideFocusRing": true,
+					"hideExtraBlankRows": true,
+					"resizingMode": "legacy",
+					"verticalAlign": "middle",
+					"scrollbarHorizontal": "hidden",
+					"columns": [
+						{
+							"header": {
+								"text": "Title",
+								"name": "HeaderSummary"
+							},
+							"name": "ColSummary",
+							"dataSource": "This:C1470.title",
+							"width": 91,
+							"truncateMode": "withEllipsis",
+							"footer": {
+								"name": "Footer1"
+							},
+							"enterable": false
+						},
+						{
+							"header": {
+								"text": "Lastname",
+								"name": "HeaderAssignee"
+							},
+							"name": "ColAssignee",
+							"dataSource": "This:C1470.lastName",
+							"width": 233,
+							"truncateMode": "withEllipsis",
+							"footer": {
+								"name": "Footer2"
+							},
+							"enterable": false
+						},
+						{
+							"header": {
+								"text": "Firstname",
+								"name": "HeaderDepartment"
+							},
+							"name": "ColDepartment",
+							"dataSource": "This:C1470.firstName",
+							"width": 110,
+							"truncateMode": "withEllipsis",
+							"footer": {
+								"name": "Footer3"
+							},
+							"enterable": false
+						}
+					]
+				},
+				"Title": {
+					"type": "text",
+					"text": "Patients",
+					"top": 20,
+					"left": 30,
+					"width": 300,
+					"height": 30,
+					"fontSize": 24,
+					"fontWeight": "bold",
+					"stroke": "#FFFFFF"
+				},
+				"ListboxTitle": {
+					"type": "text",
+					"text": "Patients list",
+					"top": 75,
+					"left": 30,
+					"width": 150,
+					"height": 26,
+					"fontSize": 18,
+					"fontWeight": "bold",
+					"stroke": "#2C2C2E"
+				},
+				"BtnRefresh": {
+					"type": "button",
+					"text": "↻ Refresh",
+					"top": 75,
+					"left": 550,
+					"width": 110,
+					"height": 28,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/BtnRefresh.4dm",
+					"style": "flat",
+					"fill": "#34C759",
+					"stroke": "#FFFFFF",
+					"fontSize": 13,
+					"fontWeight": "bold",
+					"borderRadius": 6
+				},
+				"DetailTitle": {
+					"type": "text",
+					"text": "Patient Details",
+					"top": 75,
+					"left": 710,
+					"width": 200,
+					"height": 26,
+					"fontSize": 18,
+					"fontWeight": "bold",
+					"stroke": "#2C2C2E"
+				},
+				"DetailDivider": {
+					"type": "rectangle",
+					"left": 710,
+					"top": 108,
+					"width": 350,
+					"height": 1,
+					"fill": "#E5E5E5",
+					"stroke": "transparent"
+				},
+				"LabelSummary": {
+					"type": "text",
+					"text": "Title :",
+					"top": 125,
+					"left": 710,
+					"width": 120,
+					"height": 20,
+					"fontWeight": "normal",
+					"fontSize": 12,
+					"stroke": "#8E8E93"
+				},
+				"Input_title": {
+					"type": "input",
+					"left": 710,
+					"top": 145,
+					"width": 150,
+					"height": 24,
+					"dataSource": "Form:C1466.currentPatient.title",
+					"enterable": false,
+					"focusable": false,
+					"borderStyle": "none",
+					"fill": "#F5F5F7",
+					"fontSize": 14,
+					"stroke": "#1F1F1F",
+					"method": "ObjectMethods/Input_title.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"LabelSummary1": {
+					"type": "text",
+					"text": "Lastname :",
+					"top": 185,
+					"left": 710,
+					"width": 120,
+					"height": 20,
+					"fontWeight": "normal",
+					"fontSize": 12,
+					"stroke": "#8E8E93"
+				},
+				"Input_lastName": {
+					"type": "input",
+					"left": 710,
+					"top": 205,
+					"width": 270,
+					"height": 24,
+					"dataSource": "Form:C1466.currentPatient.lastName",
+					"enterable": true,
+					"focusable": false,
+					"borderStyle": "none",
+					"fill": "#F5F5F7",
+					"fontSize": 14,
+					"stroke": "#1F1F1F"
+				},
+				"LabelSummary2": {
+					"type": "text",
+					"text": "Firstname :",
+					"top": 245,
+					"left": 710,
+					"width": 120,
+					"height": 20,
+					"fontWeight": "normal",
+					"fontSize": 12,
+					"stroke": "#8E8E93"
+				},
+				"Input_firstName": {
+					"type": "input",
+					"left": 710,
+					"top": 265,
+					"width": 270,
+					"height": 24,
+					"dataSource": "Form:C1466.currentPatient.firstName",
+					"enterable": true,
+					"focusable": false,
+					"borderStyle": "none",
+					"fill": "#F5F5F7",
+					"fontSize": 14,
+					"stroke": "#1F1F1F"
+				},
+				"BtnSave": {
+					"type": "button",
+					"text": "💾   Save",
+					"top": 311,
+					"left": 959,
+					"width": 110,
+					"height": 28,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/BtnSave.4dm",
+					"style": "flat",
+					"fill": "#34C759",
+					"stroke": "#FFFFFF",
+					"fontSize": 13,
+					"fontWeight": "bold",
+					"borderRadius": 6
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"geometryStamp": 143,
+	"method": "method.4dm"
+}

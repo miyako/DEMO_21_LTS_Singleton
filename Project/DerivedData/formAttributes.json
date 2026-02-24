@@ -1,0 +1,16 @@
+{
+	"forms": {
+		"AppointmentWizard": {
+			"timeStamp": "2026-02-24T11:39:03Z",
+			"destination": "detailScreen"
+		},
+		"Welcome": {
+			"timeStamp": "2026-02-24T11:50:41Z",
+			"destination": "detailScreen"
+		},
+		"PatientsList": {
+			"timeStamp": "2026-02-24T10:51:40Z",
+			"destination": "detailScreen"
+		}
+	}
+}

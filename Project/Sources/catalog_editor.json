@@ -1,0 +1,35 @@
+{
+	"tables": {
+		"ConsultationKind": {
+			"color": {
+				"red": 181,
+				"green": 145,
+				"blue": 209,
+				"alpha": 255
+			},
+			"coordinates": {
+				"left": 117.4384765625,
+				"top": 207.92333984375,
+				"width": 178,
+				"height": 161.33203125
+			},
+			"displayable_fields_count": 5
+		},
+		"Person": {
+			"color": {
+				"red": 237,
+				"green": 211,
+				"blue": 181,
+				"alpha": 255
+			},
+			"coordinates": {
+				"left": 411.17578125,
+				"top": 71.412719726562,
+				"width": 172.75651550293,
+				"height": 217.24089050293
+			},
+			"displayable_fields_count": 8,
+			"fields_ordering": 1
+		}
+	}
+}

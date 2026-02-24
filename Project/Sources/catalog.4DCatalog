@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="DEMO-Singletons" uuid="F7A68256ACE343E1AF3DAE7E24E05184" collation_locale="en">
+	<schema name="DEFAULT_SCHEMA"/>
+	<table name="Person" uuid="66EFAC5007F647CEB31B7ED3C1D85E1E" id="1">
+		<field name="UUID" uuid="2183915D9D074CB58742BEDA21FC6EA1" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1"/>
+		<field name="titleCode" uuid="98272BE5F53044169251347C2AA83555" type="3" never_null="true" id="2"/>
+		<field name="lastName" uuid="A229F3CB63114E3A94F0A580E81B94EF" type="10" limiting_length="255" never_null="true" id="3"/>
+		<field name="firstName" uuid="788F4B2674234373AB111BBB67EB3DA5" type="10" limiting_length="255" never_null="true" id="4"/>
+		<field name="contactDetails" uuid="AD26DBF934594C5982B0593A069BE63C" type="21" blob_switch_size="2147483647" never_null="true" id="5"/>
+		<field name="birthdate" uuid="E5CE17A77A204169AF1CA3E89786A087" type="8" never_null="true" id="6"/>
+		<field name="email" uuid="FDC506D8644349E0AB9DB620480204DC" type="10" limiting_length="255" never_null="true" id="7"/>
+		<field name="password" uuid="9864D996C3C646619C46C0B8D4E46FCD" type="10" limiting_length="255" never_null="true" id="8"/>
+		<primary_key field_name="UUID" field_uuid="2183915D9D074CB58742BEDA21FC6EA1"/>
+	</table>
+	<table name="ConsultationKind" uuid="7D8C50E281ED4BD980A5A42A3AD32FD5" id="2">
+		<field name="UUID" uuid="1601D18B49C34273BE0307613A36A769" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1">
+			<field_extra multi_line="false"/>
+		</field>
+		<field name="name" uuid="A90406955C49429382751B22A6E88585" type="10" limiting_length="255" never_null="true" id="2"/>
+		<field name="description" uuid="1C07C25D409F43D48AFCDF6423EB1563" type="10" never_null="true" id="3"/>
+		<field name="icon" uuid="7CB26547C46D4F92BA1063FDBD4D2EBA" type="12" never_null="true" id="4"/>
+		<primary_key field_name="UUID" field_uuid="1601D18B49C34273BE0307613A36A769"/>
+		<table_extra trigger_insert="true" trigger_delete="true" trigger_update="true"/>
+	</table>
+	<index kind="regular" unique_keys="true" uuid="7976D6BD12ED4314B9C35D4FCD300489" type="1">
+		<field_ref uuid="1601D18B49C34273BE0307613A36A769" name="UUID">
+			<table_ref uuid="7D8C50E281ED4BD980A5A42A3AD32FD5" name="ConsultationKind"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="85B12D041C6C4D1F88D32102EEAA6385" type="1">
+		<field_ref uuid="2183915D9D074CB58742BEDA21FC6EA1" name="UUID">
+			<table_ref uuid="66EFAC5007F647CEB31B7ED3C1D85E1E" name="Person"/>
+		</field_ref>
+	</index>
+	<base_extra>
+		<journal_file journal_file_enabled="true"/>
+	</base_extra>
+</base>

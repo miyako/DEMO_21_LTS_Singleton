@@ -1,0 +1,187 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 650,
+	"windowMinHeight": 700,
+	"windowMaxWidth": 650,
+	"windowMaxHeight": 32767,
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onDataChange"
+	],
+	"windowTitle": "Email Inbox - AI Task Generator",
+	"destination": "detailScreen",
+	"formClass": "AppointmentWizard",
+	"pages": [
+		{
+			"objects": {
+				"Background": {
+					"type": "rectangle",
+					"left": 0,
+					"top": 0,
+					"width": 1200,
+					"height": 700,
+					"fill": "#155BDC",
+					"stroke": "transparent",
+					"strokeWidth": 0
+				},
+				"Background1": {
+					"type": "picture",
+					"top": 0,
+					"left": 0,
+					"width": 771,
+					"height": 700,
+					"picture": "/RESOURCES/background.png",
+					"pictureFormat": "scaled"
+				},
+				"DetailCard": {
+					"type": "rectangle",
+					"left": 30,
+					"top": 70,
+					"width": 590,
+					"height": 620,
+					"fill": "#FFFFFF",
+					"stroke": "#E5E5E5",
+					"strokeWidth": 1,
+					"borderRadius": 12
+				}
+			}
+		},
+		{
+			"objects": {
+				"Title": {
+					"type": "text",
+					"text": "Appointment Wizard",
+					"top": 20,
+					"left": 30,
+					"width": 400,
+					"height": 30,
+					"fontSize": 24,
+					"fontWeight": "bold",
+					"stroke": "#FFFFFF"
+				},
+				"DetailTitle": {
+					"type": "text",
+					"text": "Schedule a new appointment",
+					"top": 85,
+					"left": 50,
+					"width": 319,
+					"height": 26,
+					"fontSize": 18,
+					"fontWeight": "bold",
+					"stroke": "#2C2C2E"
+				},
+				"DetailDivider": {
+					"type": "rectangle",
+					"left": 50,
+					"top": 118,
+					"width": 550,
+					"height": 1,
+					"fill": "#E5E5E5",
+					"stroke": "transparent"
+				},
+				"LabelStatus": {
+					"type": "text",
+					"text": "Consultation kind :",
+					"top": 135,
+					"left": 50,
+					"width": 180,
+					"height": 20,
+					"fontWeight": "normal",
+					"fontSize": 12,
+					"stroke": "#8E8E93"
+				},
+				"LabelSender": {
+					"type": "text",
+					"text": "Patient :",
+					"top": 204,
+					"left": 50,
+					"width": 80,
+					"height": 20,
+					"fontWeight": "normal",
+					"fontSize": 12,
+					"stroke": "#8E8E93"
+				},
+				"Pup_consultationKind": {
+					"type": "button",
+					"top": 161,
+					"left": 50,
+					"width": 407,
+					"height": 23,
+					"fontFamily": "System Font Regular",
+					"fontSize": 12,
+					"focusable": false,
+					"text": "--consultationKind--",
+					"popupPlacement": "linked",
+					"style": "bevel",
+					"method": "ObjectMethods/Pup_consultationKind.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"firstName": {
+					"type": "input",
+					"top": 228,
+					"left": 50,
+					"width": 156,
+					"height": 21,
+					"dataSource": "Form:C1466.firstName",
+					"placeholder": "Firstname",
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/firstName.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"lastNAme": {
+					"type": "input",
+					"top": 228,
+					"left": 213,
+					"width": 240,
+					"height": 21,
+					"dataSource": "Form:C1466.lastName",
+					"placeholder": "Lastname",
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/lastNAme.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Pup_person": {
+					"type": "button",
+					"top": 226,
+					"left": 464,
+					"width": 19,
+					"height": 23,
+					"fontFamily": "System Font Regular",
+					"fontSize": 12,
+					"focusable": false,
+					"popupPlacement": "linked",
+					"style": "bevel",
+					"method": "ObjectMethods/Pup_person.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm",
+	"geometryStamp": 63
+}
