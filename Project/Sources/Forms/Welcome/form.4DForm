@@ -147,7 +147,7 @@
 					"height": 24,
 					"fontSize": 13,
 					"fontWeight": "normal",
-					"stroke": "#8E8E93",
+					"stroke": "automatic",
 					"textAlign": "center"
 				},
 				"Static Picture1": {

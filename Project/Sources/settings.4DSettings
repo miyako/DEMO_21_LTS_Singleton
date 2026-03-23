@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><preferences stamp="3">
+<?xml version="1.0" encoding="UTF-8"?><preferences stamp="4">
 	<com.4d>
 		<interface>
-			<user can_change_password="false" color_scheme="light" display_list="false"/>
+			<user can_change_password="false" color_scheme="dark" display_list="false"/>
 		</interface>
 		<database>
 			<cache adaptative="false" size_fixed="2048"/>
