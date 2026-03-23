@@ -24,7 +24,7 @@
 		"onDataChange",
 		"onDragOver"
 	],
-	"windowTitle": "Tasks List",
+	"windowTitle": "",
 	"destination": "detailScreen",
 	"formClass": "PatientsList",
 	"pages": [
@@ -219,7 +219,7 @@
 					"left": 710,
 					"top": 145,
 					"width": 150,
-					"height": 21,
+					"height": 17,
 					"dataSource": "Form:C1466.currentPatient.title",
 					"enterable": false,
 					"focusable": false,
@@ -229,7 +229,8 @@
 					"method": "ObjectMethods/Input_title.4dm",
 					"events": [
 						"onClick"
-					]
+					],
+					"contextMenu": "none"
 				},
 				"LabelSummary1": {
 					"type": "text",
@@ -247,13 +248,13 @@
 					"left": 710,
 					"top": 205,
 					"width": 270,
-					"height": 21,
+					"height": 17,
 					"dataSource": "Form:C1466.currentPatient.lastName",
 					"enterable": true,
 					"focusable": false,
 					"borderStyle": "system",
-					"fill": "automatic",
-					"stroke": "automatic"
+					"stroke": "automatic",
+					"contextMenu": "none"
 				},
 				"LabelSummary2": {
 					"type": "text",
@@ -271,13 +272,13 @@
 					"left": 710,
 					"top": 265,
 					"width": 270,
-					"height": 21,
+					"height": 17,
 					"dataSource": "Form:C1466.currentPatient.firstName",
 					"enterable": true,
 					"focusable": false,
 					"borderStyle": "system",
-					"fill": "automatic",
-					"stroke": "automatic"
+					"stroke": "automatic",
+					"contextMenu": "none"
 				},
 				"BtnSave": {
 					"type": "button",
@@ -307,6 +308,6 @@
 			"View 1": {}
 		}
 	},
-	"geometryStamp": 158,
+	"geometryStamp": 175,
 	"method": "method.4dm"
 }

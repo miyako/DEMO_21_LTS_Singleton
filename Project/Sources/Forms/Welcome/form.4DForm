@@ -14,7 +14,7 @@
 	"events": [
 		"onLoad"
 	],
-	"windowTitle": "Welcome - 4D Demo Tasks AI",
+	"windowTitle": "Welcome - Singleton Demo",
 	"destination": "detailScreen",
 	"formClass": "WelcomeForm",
 	"pages": [

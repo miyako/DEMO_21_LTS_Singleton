@@ -74,6 +74,11 @@ Function searchPatientsByLastName()
 	End case 
 	
 Function pupPatient()
+	
+	If (Form.searchPatients=Null)
+		return 
+	End if 
+	
 	var $patient : cs.PersonEntity
 	var $menu; $choose : Text
 	
