@@ -1,3 +1,7 @@
 .DS_Store
 Libraries/
 Data/Logs/
+userPreferences.*
+Data/data.4DD
+Data/data.4DIndx
+Data/data.journal
