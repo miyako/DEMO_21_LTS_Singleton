@@ -4,10 +4,9 @@ local Function get nameInWindowTitle()->$nameInWindowTitle : Text
 	
 	$nameInWindowTitle:=This.firstName
 	
-	
 Function getFullName()->$fullName : Text
-	var $coll : Collection
 	
+	var $coll : Collection
 	$coll:=New collection(This.title; This.firstName; This.lastName)
 	$fullName:=$coll.join(" "; ck ignore null or empty)
 	
@@ -24,5 +23,12 @@ Function get year()->$year : Integer
 	$year:=Year of(This.birthdate)
 	
 local Function get title()->$title : Text
-	$title:=cs.CacheManager.me.titles[This.titleCode]
 	
+	$title:=cs.CacheManager.me.titles[This.titleCode]
+/*
+                       ^^ 
+.meは共有シングルトンの印
+もしこの時点で未定義なら自動的にインスタンス化される
+すでにインスタンス化されていればコンストラクターは呼ばれない
+したがってtitlesは全プロセスに共通のモリにキャッシュされている
+*/
