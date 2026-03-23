@@ -2,9 +2,9 @@
 	"tables": {
 		"ConsultationKind": {
 			"color": {
-				"red": 181,
-				"green": 145,
-				"blue": 209,
+				"red": 104,
+				"green": 84,
+				"blue": 122,
 				"alpha": 255
 			},
 			"coordinates": {
@@ -17,9 +17,9 @@
 		},
 		"Person": {
 			"color": {
-				"red": 237,
-				"green": 211,
-				"blue": 181,
+				"red": 117,
+				"green": 105,
+				"blue": 93,
 				"alpha": 255
 			},
 			"coordinates": {
