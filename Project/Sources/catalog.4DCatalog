@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
-<base name="DEMO-Singletons" uuid="F7A68256ACE343E1AF3DAE7E24E05184" collation_locale="en">
+<base name="Singletons" uuid="F7A68256ACE343E1AF3DAE7E24E05184" collation_locale="en">
 	<schema name="DEFAULT_SCHEMA"/>
 	<table name="Person" uuid="66EFAC5007F647CEB31B7ED3C1D85E1E" id="1">
 		<field name="UUID" uuid="2183915D9D074CB58742BEDA21FC6EA1" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1"/>
@@ -34,6 +34,6 @@
 		</field_ref>
 	</index>
 	<base_extra>
-		<journal_file journal_file_enabled="true"/>
+		<journal_file journal_file_enabled="false"/>
 	</base_extra>
 </base>
